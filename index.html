@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" crossorigin>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <header class="header max-width">
+    <div class="container header__container">
+      <img src="res/logo.svg" alt="логотип сайта" class="header__logo logo">
+      <nav class="header__nav header-nav">
+        <ul class="header-nav__list header__list">
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">
+              О нас
+            </a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">
+              Галерея
+            </a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">
+              Каталог
+            </a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">
+              События
+            </a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">
+              Издания
+            </a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">
+              Проекты
+            </a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#" class="header-nav__link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="header__link">Войти</a>
+
+      <div class="header__bottom header-bottom">
+        <div class="container header-bottom__container">
+          <ul class="header__list header-list">
+            <li class="header-list__item">
+              <button class="header-list__button">Реализм</button>
+              <ul class="header-list__dropdown dropdown">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_1-1">Тинторетто</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_1-2">Фридрих</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_1-3">Леонардо</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_1-4">Верроккьо</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-list__item">
+              <button class="header-list__button">Импрессионизм</button>
+              <ul class="header-list__dropdown dropdown">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_2-1">Моне</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_2-2">Сислей</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_2-3">Мане</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_2-4">Ренуар</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-list__item">
+              <button class="header-list__button">Постимпрессионизм</button>
+              <ul class="header-list__dropdown dropdown">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_3-1">Ван Гог</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_3-2">Сезанн</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_3-3">Гоген</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_3-4">Сёра</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-list__item">
+              <button class="header-list__button">Авангард</button>
+              <ul class="header-list__dropdown dropdown">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_4-1">Кандинский</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_4-2">Маринетти</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_4-3">Малевич</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_4-4">Пикассо</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-list__item">
+              <button class="header-list__button">Футуризм</button>
+              <ul class="header-list__dropdown dropdown">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_5-1">Карра</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_5-2">Прателла</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_5-3">Северини</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link dropdown__link_5-4">Балла</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <label class="header__label">
+            <input type="text" class="header__input" placeholder="Поиск по сайту">
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero max-width">
+      <div class="swiper-container swiper__container">
+        <div class="swiper-wrapper swiper__wrapper">
+          <div class="swiper-slide swiper__slide_1"></div>
+          <div class="swiper-slide swiper__slide_2"></div>
+          <div class="swiper-slide swiper__slide_3"></div>
+        </div>
+      </div>
+
+      <div class="container hero__container">
+
+        <h1 class="hero__title">
+          Прикоснитесь к прекрасному
+        </h1>
+        <p class="hero__text">
+          Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
+          предложений.
+        </p>
+        <a class="hero__button button" href="#">Подписаться на рассылку</a>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <div class="container main__container">
+        <h2 class="about-us__title title">О нас</h2>
+        <p class="about-us__text">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
+          Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
+          внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
+          исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
+          учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
+          действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
+          быть разоблачены.
+        </p>
+      </div>
+    </section>
+
+    <section class="galery max-width">
+      <div class="container main__container">
+        <h2 class="galety__title title">Галерея</h2>
+        <div class="galery__content">
+          <div class="galery__row filter">
+            <div class="galery__filter">
+              <select class="galery__select">
+                <option value="Автор">Автор</option>
+              </select>
+              <div class="galery__buttons">
+                <button class="galery__button galery__button_first">Направление</button>
+                <button class="galery__button galery__button_second">Техника</button>
+              </div>
+            </div>
+            <p class="galery__text">
+              Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний авторизуйтесь, либо
+              воспользуйтесь лицензией.
+            </p>
+          </div>
+
+          <div class="galery__row images">
+            <div class="swiper-container galery-swiper">
+              <div class="swiper-wrapper">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+                <img src="res/Rectangle 70.jpg" alt="" class="swiper-slide galery-swiper__slide">
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
