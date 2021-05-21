@@ -6,45 +6,74 @@ const swiper = new Swiper('.hero__swiper', {
   },
 });
 
-const swiper2 = new Swiper(".galery-swiper", {
-  slidesPerView: 3,
-  slidesPerColumn: 2,
+const swiper2 = new Swiper(".galery__swiper", {
+  slidesPerView: 1,
+  slidesPerColumn: 1,
   spaceBetween: 50,
   allowTouchMove: false,
   initialSlide: 7,
-  slidesPerGroup: 3,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34
+    },
+    1025: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
+    }
+  },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".galery__pagination",
     type: "fraction",
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".galery__next",
+    prevEl: ".galery__prev",
   },
 });
 
 const swiper3 = new Swiper(".editions__swiper", {
-  slidesPerView: 3,
-  spaceBetween: 50,
+  slidesPerView: 1,
   allowTouchMove: false,
+  spaceBetween: 50,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1025: {
+      slidesPerView: 3,
+    }
+  },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".editions__pagination",
     type: "fraction",
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".editions__next",
+    prevEl: ".editions__prev",
   },
 });
 
-const swiper4 = new Swiper(".projects__swiper", {
-  slidesPerView: 3,
+const swiper4 = new Swiper(".projects__swiper-container", {
+  slidesPerView: 1,
   spaceBetween: 50,
   setWrapperSize: '200px',
   allowTouchMove: false,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1025: {
+      slidesPerView: 3,
+    }
+  },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".projects__next",
+    prevEl: ".projects__prev",
   },
 });
 
@@ -111,16 +140,20 @@ function init() {
     zoom: 13,
     controls: []
   });
-
-  // myPlacemark = new ymaps.Placemark([48.872197, 2.354224], {
-  //   hintContent: 'улица дю Фобур Сен Дени, 54',
-  // }, {
-  //   iconLayout: 'default#image',
-  //   iconImageHref: 'src/icon.svg',
-  //   iconImageSize: [28, 40],
-  //   iconImageOffset: [-5, -38]
-  // }),
-
-  //   myMap.geoObjects
-  //     .add(myPlacemark)
 }
+
+// 55.758468, 37.601088
+
+document.querySelector('.event__button').addEventListener('click', () => {
+  document.querySelectorAll('.event__item_hide').forEach((item) => {
+    item.classList.remove('event__item_hide')
+  })
+})
+
+document.querySelector('.header__input').addEventListener('focus', () => {
+  document.querySelector('.header__label').classList.add('header__label_active')
+})
+
+document.querySelector('.header__input').addEventListener('blur', () => {
+  document.querySelector('.header__label').classList.remove('header__label_active')
+})
