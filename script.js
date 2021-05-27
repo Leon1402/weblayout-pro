@@ -10,20 +10,22 @@ const swiper2 = new Swiper(".galery__swiper", {
   slidesPerView: 1,
   slidesPerColumn: 1,
   spaceBetween: 50,
-  allowTouchMove: false,
+  allowTouchMove: true,
   initialSlide: 7,
   breakpoints: {
-    768: {
+    321: {
       slidesPerView: 2,
       slidesPerColumn: 2,
       slidesPerGroup: 2,
-      spaceBetween: 34
+      spaceBetween: 34,
+      allowTouchMove: false,
     },
     1025: {
       slidesPerView: 3,
       slidesPerColumn: 2,
       slidesPerGroup: 3,
       spaceBetween: 50,
+      allowTouchMove: false,
     }
   },
   pagination: {
@@ -43,6 +45,7 @@ const swiper3 = new Swiper(".editions__swiper", {
   breakpoints: {
     768: {
       slidesPerView: 2,
+    spaceBetween: 34,
     },
     1025: {
       slidesPerView: 3,
@@ -61,13 +64,13 @@ const swiper3 = new Swiper(".editions__swiper", {
 const swiper4 = new Swiper(".projects__swiper-container", {
   slidesPerView: 1,
   spaceBetween: 50,
-  setWrapperSize: '200px',
   allowTouchMove: false,
   breakpoints: {
-    768: {
+    500: {
+      spaceBetween: 34,
       slidesPerView: 2,
     },
-    1025: {
+    769: {
       slidesPerView: 3,
     }
   },
@@ -144,10 +147,23 @@ function init() {
 
 // 55.758468, 37.601088
 
-document.querySelector('.event__button').addEventListener('click', () => {
-  document.querySelectorAll('.event__item_hide').forEach((item) => {
-    item.classList.remove('event__item_hide')
+const openAllCard = (button) => {
+  button.style.display = 'none';
+  document.querySelectorAll('.event__slide').forEach((item) => {
+    item.style.display = 'block'
   })
+}
+
+const hideCard = (button) => {
+  button.style.display = 'block';
+  document.querySelectorAll('.event__slide_hide').forEach((item) => {
+    item.style.removeProperty('display');
+  });
+  document.querySelector('.event__slide_hide-1024').style.removeProperty('display');
+}
+
+document.querySelector('.event__button').addEventListener('click', (e) => {
+  openAllCard(e.currentTarget)
 })
 
 document.querySelector('.header__input').addEventListener('focus', () => {
@@ -157,3 +173,34 @@ document.querySelector('.header__input').addEventListener('focus', () => {
 document.querySelector('.header__input').addEventListener('blur', () => {
   document.querySelector('.header__label').classList.remove('header__label_active')
 })
+
+let swiper5
+
+const startSwiper = () => {
+  const item = document.querySelector('.event__swiper');
+  console.log(window.innerWidth)
+  if (window.innerWidth <= 450 && item.dataset.mobile == 'false') {
+    item.dataset.mobile = true;
+    openAllCard(document.querySelector('.event__button'))
+    swiper5 = new Swiper(item, {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      pagination: {
+        el: ".event__pagination",
+        type: "bullets",
+        clickable: true,
+      },
+    });
+  }
+  if (window.innerWidth > 450) {
+    hideCard(document.querySelector('.event__button'))
+    if (item.classList.contains('swiper-container-initialized')) {
+      item.dataset.mobile = false;
+      swiper5.destroy()
+    }
+  }
+}
+
+startSwiper()
+
+window.addEventListener('resize', () => { startSwiper() })
