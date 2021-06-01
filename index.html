@@ -23,9 +23,6 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
@@ -35,6 +32,13 @@
   <link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
+
+
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/galery.css">
+  <link rel="stylesheet" href="styles/catalog.css">
+
   <link rel="stylesheet" href="styles/styles1024.css">
 </head>
 
@@ -291,171 +295,197 @@
           <h2 class="title catalog__title">Каталог</h2>
           <ul class="catalog__lang-list">
             <li class="catalog__lang-item">
-              <button class="catalog__lang-button catalog__lang-button_french button"></button>
+              <button class="catalog__lang-button catalog__lang-button_french button" data-index="1"></button>
             </li>
             <li class="catalog__lang-item">
-              <button class="catalog__lang-button catalog__lang-button_german button"></button>
+              <button class="catalog__lang-button catalog__lang-button_german button" data-index="2"></button>
             </li>
             <li class="catalog__lang-item">
-              <button class="catalog__lang-button catalog__lang-button_italy button"></button>
+              <button class="catalog__lang-button catalog__lang-button_active catalog__lang-button_italy button"
+                data-index="3"></button>
             </li>
             <li class="catalog__lang-item">
-              <button class="catalog__lang-button catalog__lang-button_russia button"></button>
+              <button class="catalog__lang-button catalog__lang-button_russia button" data-index="4"></button>
             </li>
             <li class="catalog__lang-item">
-              <button class="catalog__lang-button catalog__lang-button_belgium button"></button>
+              <button class="catalog__lang-button catalog__lang-button_belgium button" data-index="5"></button>
             </li>
           </ul>
         </div>
-        <p class="catalog__text">
-          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
-          политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
-          частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
-          уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
-        </p>
-        <div class="catalog__content">
-          <div class="catalog__row description">
-            <img src="res/domen-girl.jpg" alt="Портрет художника" class="description__image">
-            <h2 class="description__title">Доменико Гирландайо</h2>
-            <p class="description__years">2 июня 1448 — 11 января 1494</p>
-            <p class="description__text">
-              Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
-              продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение
-              года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными
-              подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане
-              Флоренции в костюмах того времени).
-            </p>
-          </div>
 
-          <ul class="catalog__row accordion">
-            <li class="accordion__item">
-              <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
-              <ul class="accordion__list accordion-list">
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="0">Бенедетто ди Биндо</button>
+        <ul class="catalog__list">
+          <li class="catalog__item">Франция</li>
+          <li class="catalog__item">Германия</li>
+          <li class="catalog__item catalog__item_active">
+            <p class="catalog__text">
+              Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+              политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего
+              лишь
+              частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день
+              остаются
+              уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+            </p>
+            <div class="catalog__content">
+              <div class="catalog__row description">
+                <img src="res/domen-girl.jpg" alt="Портрет художника" class="description__image">
+                <h2 class="description__title">Доменико Гирландайо</h2>
+                <p class="description__years">2 июня 1448 — 11 января 1494</p>
+                <p class="description__text">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
+                  течение
+                  года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными
+                  подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане
+                  Флоренции в костюмах того времени).
+                </p>
+              </div>
+
+              <ul class="catalog__row accordion">
+                <li class="accordion__item">
+                  <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
+                  <ul class="accordion__list accordion-list">
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="0">Бенедетто ди Биндо</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="1">Бергоньоне, Амброджо</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="2">Биссоло, Франческо</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="3">Больтраффио, Джованни</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="4">Бонсиньори, Франческо</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="5">Боттичини, Рафаэлло</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="6">Брамантино</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="7">Бреа, Людовико</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="8">Бьяджо д’Антонио Туччи</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="9">Веккьетта</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="10">Андреа Верроккьо</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button accordion-list__button_active button"
+                        data-index="11">Доменико
+                        Гирландайо</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="12">Беноццо Гоццоли</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="13">Граначчи, Франческо</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="14">Грегорио ди Чекко</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="15">Джованни да Удине</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="16">Джованни ди Паоло</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="17">Джорджоне</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="18">Парентино, Бернардо</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="19">Пезеллино</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="20">Пьетро Перуджино</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="21">Перуцци, Бальдассаре</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="22">Пизанелло</button>
+                    </li>
+                    <li class="accordion-list__item">
+                      <button class="accordion-list__button button" data-index="23">Пинтуриккьо</button>
+                    </li>
+                  </ul>
                 </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="1">Бергоньоне, Амброджо</button>
+                <li class="accordion__item">
+                  <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis
+                    sapiente
+                    adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae
+                    aperiam
+                    eveniet.
+                  </p>
                 </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="2">Биссоло, Франческо</button>
+                <li class="accordion__item">
+                  <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis
+                    sapiente
+                    adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae
+                    aperiam
+                    eveniet.
+                  </p>
                 </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="3">Больтраффио, Джованни</button>
+                <li class="accordion__item">
+                  <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis
+                    sapiente
+                    adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae
+                    aperiam
+                    eveniet.
+                  </p>
                 </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="4">Бонсиньори, Франческо</button>
+                <li class="accordion__item">
+                  <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis
+                    sapiente
+                    adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae
+                    aperiam
+                    eveniet.
+                  </p>
                 </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="5">Боттичини, Рафаэлло</button>
+                <li class="accordion__item">
+                  <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis
+                    sapiente
+                    adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae
+                    aperiam
+                    eveniet.
+                  </p>
                 </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="6">Брамантино</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="7">Бреа, Людовико</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="8">Бьяджо д’Антонио Туччи</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="9">Веккьетта</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="10">Андреа Верроккьо</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button accordion-list__button_active button" data-index="11">Доменико
-                    Гирландайо</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="12">Беноццо Гоццоли</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="13">Граначчи, Франческо</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="14">Грегорио ди Чекко</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="15">Джованни да Удине</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="16">Джованни ди Паоло</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="17">Джорджоне</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="18">Парентино, Бернардо</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="19">Пезеллино</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="20">Пьетро Перуджино</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="21">Перуцци, Бальдассаре</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="22">Пизанелло</button>
-                </li>
-                <li class="accordion-list__item">
-                  <button class="accordion-list__button button" data-index="23">Пинтуриккьо</button>
+                <li class="accordion__item">
+                  <h3 class="accordion__title">C 2000 г.</h3>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis
+                    sapiente
+                    adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae
+                    aperiam
+                    eveniet.
+                  </p>
                 </li>
               </ul>
-            </li>
-            <li class="accordion__item">
-              <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
-              <p class="accordion__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis sapiente
-                adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae aperiam
-                eveniet.
-              </p>
-            </li>
-            <li class="accordion__item">
-              <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
-              <p class="accordion__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis sapiente
-                adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae aperiam
-                eveniet.
-              </p>
-            </li>
-            <li class="accordion__item">
-              <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
-              <p class="accordion__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis sapiente
-                adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae aperiam
-                eveniet.
-              </p>
-            </li>
-            <li class="accordion__item">
-              <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
-              <p class="accordion__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis sapiente
-                adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae aperiam
-                eveniet.
-              </p>
-            </li>
-            <li class="accordion__item">
-              <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
-              <p class="accordion__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis sapiente
-                adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae aperiam
-                eveniet.
-              </p>
-            </li>
-            <li class="accordion__item">
-              <h3 class="accordion__title">C 2000 г.</h3>
-              <p class="accordion__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, vitae excepturi, nisi debitis sapiente
-                adipisci qui tempore doloribus harum modi nam repudiandae? Unde quia quisquam aut. Iste beatae aperiam
-                eveniet.
-              </p>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+          <li class="catalog__item">Россия</li>
+          <li class="catalog__item">Испания</li>
+        </ul>
       </div>
     </section>
 
@@ -466,9 +496,9 @@
         <div class="event__swiper" data-mobile="false">
           <div class="swiper-wrapper event__wrapper">
             <article class="swiper-slide event__slide article">
-              <img src="res/article1.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
-              <div class="article__content">
-                <div class="article__info">
+              <div class="article__container">
+                <img src="res/article1.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
+                <div class="article__content">
                   <div class="article__descr">
                     <p class="article__descr-text">
                       Музей им. Щусева<br> с 20 марта по 30 апреля
@@ -479,13 +509,13 @@
                     художественной
                     династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 </div>
-                <a href="#" class="article__link">Подробнее</a>
               </div>
+              <a href="#" class="article__link">Подробнее</a>
             </article>
             <article class="swiper-slide event__slide article">
-              <img src="res/article2.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
-              <div class="article__content">
-                <div class="article__info">
+              <div class="article__container">
+                <img src="res/article2.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
+                <div class="article__content">
                   <div class="article__descr">
                     <p class="article__descr-text">
                       ММОМА<br>24 марта 19:00
@@ -495,13 +525,13 @@
                   <p class="article__text">Высокий уровень вовлечения представителей целевой аудитории является четким
                     доказательством простого факта.</p>
                 </div>
-                <a href="#" class="article__link">Подробнее</a>
               </div>
+              <a href="#" class="article__link">Подробнее</a>
             </article>
             <article class="swiper-slide event__slide event__slide_hide-1024 article">
-              <img src="res/article3.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
-              <div class="article__content">
-                <div class="article__info">
+              <div class="article__container">
+                <img src="res/article3.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
+                <div class="article__content">
                   <div class="article__descr">
                     <p class="article__descr-text">
                       Еврейский музей<br>с 31 марта по 21 апреля
@@ -512,13 +542,13 @@
                     разработки
                     играет важную роль в формировании глубокомысленных рассуждений. </p>
                 </div>
-                <a href="#" class="article__link">Подробнее</a>
               </div>
+              <a href="#" class="article__link">Подробнее</a>
             </article>
             <article class="swiper-slide event__slide event__slide_hide article">
-              <img src="res/article4.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
-              <div class="article__content">
-                <div class="article__info">
+              <div class="article__container">
+                <img src="res/article4.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
+                <div class="article__content">
                   <div class="article__descr">
                     <p class="article__descr-text">
                       Третьяковка на Крымском валу<br>с 30 марта по 30 апреля
@@ -528,13 +558,13 @@
                   <p class="article__text">ОВнезапно, реплицированные с зарубежных источников, современные исследования.
                   </p>
                 </div>
-                <a href="#" class="article__link">Подробнее</a>
               </div>
+              <a href="#" class="article__link">Подробнее</a>
             </article>
             <article class="swiper-slide event__slide event__slide_hide article">
-              <img src="res/article5.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
-              <div class="article__content">
-                <div class="article__info">
+              <div class="article__container">
+                <img src="res/article5.jpg" alt="Музей им. Щусева с 20 марта по 30 апреля" class="article__image">
+                <div class="article__content">
                   <div class="article__descr">
                     <p class="article__descr-text">
                       ММАМ<br>с 8 апреля по 20 мая
@@ -545,8 +575,8 @@
                     художественной
                     династии, которую продолжили его брат Давид и сын Ридольфо. </p>
                 </div>
-                <a href="#" class="article__link">Подробнее</a>
               </div>
+              <a href="#" class="article__link">Подробнее</a>
             </article>
           </div>
           <div class="event__pagination"></div>
@@ -740,11 +770,22 @@
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
           фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
           уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
-          Прежде всего, постоянное информационно&#8209;пропагандистское <span class="symbol tooltip1"></span>
+          Прежде всего, постоянное информационно&#8209;пропагандистское
+          <span class="symbol">
+            <span class="tooltip">Пример современных тенденций - современная методология разработки <button class="tooltip__close"></button></span>
+          </span>
           обеспечение нашей деятельности однозначно фиксирует
           необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
-          оппозиции могут быть рассмотрены <span class="symbol tooltip2"></span> исключительно в разрезе маркетинговых и
-          финансовых <span class="symbol tooltip3"></span> предпосылок. Банальные, но
+          оппозиции могут быть рассмотрены
+          <span class="symbol">
+            <span class="tooltip">В стремлении повысить качество <button class="tooltip__close"></button></span>
+          </span>
+          исключительно в разрезе маркетинговых и
+          финансовых
+          <span class="symbol">
+            <span class="tooltip">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции <button class="tooltip__close"></button></span>
+          </span>
+           предпосылок. Банальные, но
           неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
           которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
           Подробнее: <a href="blanchard-art.ru/projects/about"

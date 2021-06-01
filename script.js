@@ -41,11 +41,11 @@ const swiper2 = new Swiper(".galery__swiper", {
 const swiper3 = new Swiper(".editions__swiper", {
   slidesPerView: 1,
   allowTouchMove: false,
-  spaceBetween: 50,
+  spaceBetween: 40,
   breakpoints: {
     768: {
       slidesPerView: 2,
-    spaceBetween: 34,
+      spaceBetween: 38,
     },
     1025: {
       slidesPerView: 3,
@@ -67,10 +67,9 @@ const swiper4 = new Swiper(".projects__swiper-container", {
   allowTouchMove: false,
   breakpoints: {
     500: {
-      spaceBetween: 34,
       slidesPerView: 2,
     },
-    769: {
+    1025: {
       slidesPerView: 3,
     }
   },
@@ -120,21 +119,6 @@ window.addEventListener('click', e => {
   }
 });
 
-tippy('.tooltip1', {
-  content: 'Пример современных тенденций - современная методология разработки',
-  maxWidth: 264,
-});
-
-tippy('.tooltip2', {
-  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  ',
-  maxWidth: 264,
-});
-
-tippy('.tooltip3', {
-  content: 'В стремлении повысить качество ',
-  maxWidth: 264,
-});
-
 ymaps.ready(init);
 
 function init() {
@@ -150,12 +134,12 @@ function init() {
 const openAllCard = (button) => {
   button.style.display = 'none';
   document.querySelectorAll('.event__slide').forEach((item) => {
-    item.style.display = 'block'
+    item.style.display = 'flex'
   })
 }
 
 const hideCard = (button) => {
-  button.style.display = 'block';
+  button.style.display = 'flex';
   document.querySelectorAll('.event__slide_hide').forEach((item) => {
     item.style.removeProperty('display');
   });
@@ -178,9 +162,8 @@ let swiper5
 
 const startSwiper = () => {
   const item = document.querySelector('.event__swiper');
-  console.log(window.innerWidth)
-  if (window.innerWidth <= 450 && item.dataset.mobile == 'false') {
-    item.dataset.mobile = true;
+  if (window.innerWidth <= 500 && item.dataset.mobile == 'false') {
+    item.dataset.mobile = 'true';
     openAllCard(document.querySelector('.event__button'))
     swiper5 = new Swiper(item, {
       slidesPerView: 1,
@@ -192,10 +175,10 @@ const startSwiper = () => {
       },
     });
   }
-  if (window.innerWidth > 450) {
+  if (window.innerWidth > 500) {
     hideCard(document.querySelector('.event__button'))
     if (item.classList.contains('swiper-container-initialized')) {
-      item.dataset.mobile = false;
+      item.dataset.mobile = 'false';
       swiper5.destroy()
     }
   }
@@ -203,4 +186,37 @@ const startSwiper = () => {
 
 startSwiper()
 
-window.addEventListener('resize', () => { startSwiper() })
+window.addEventListener('resize', (e) => {
+  startSwiper();
+})
+
+const catalogButton = document.querySelectorAll('.catalog__lang-button');
+const catalogContent = document.querySelectorAll('.catalog__item')
+
+catalogButton.forEach(button => {
+  button.addEventListener('click', e => {
+    catalogButton.forEach(button => {
+      button.classList.remove('catalog__lang-button_active');
+    })
+    catalogContent.forEach(item => {
+      item.classList.remove('catalog__item_active')
+    })
+    e.currentTarget.classList.add('catalog__lang-button_active');
+    catalogContent[e.currentTarget.dataset.index - 1].classList.add('catalog__item_active')
+  })
+})
+
+
+window.addEventListener('click', e => {
+  if (!e._isDropdownClick) {
+    dropdowns.forEach(item => {
+      item.classList.remove('dropdown_active');
+    })
+    headerButtons.forEach(item => {
+      item.classList.remove('header-list__button_active');
+    })
+  }
+});
+
+
+

@@ -145,27 +145,39 @@
   }
 
   .event__swiper {
+    overflow: hidden;
     margin-bottom: 21px;
   }
 
   .article__image {
-    height: 198px;
+    height: 199px;
     margin-bottom: 16px;
     object-fit: cover;
   }
 
   .article {
+    height: auto;
+    min-height: 683px;
+    padding-bottom: 50px;
+  }
+
+  .article__title {
+    font-size: 2.35vw;
+    line-height: 3.3vw;
   }
 
   .article__content {
-    padding-left: 35px;
-    padding-right: 17px;
-    padding-bottom: 50px;
+    padding-left: 3.5vw;
+    padding-right: 1.5vw;
   }
 
   .article__text {
     max-width: 94%;
-    margin-bottom: 30px;
+    line-height: 3.2vw;
+  }
+
+  .article__link {
+    margin-left: 35px;
   }
 
   .categories {
@@ -184,6 +196,7 @@
     background-image: url(../res/editions-background-1024.jpg);
   }
 
+
   .projects__prev {
     margin-right: 24px;
   }
@@ -200,6 +213,26 @@
     background-image: url(../res/symbol-1024.svg);
     background-color: var(--white-color);
     border: 1px solid var(--purple-color)
+  }
+
+  .tooltip {
+    bottom: calc(180% + 75px);
+    width: 240px;
+    margin-left: -120px;
+    padding: 7px 10px;
+  }
+
+  .tooltip::after {
+    display: none;
+  }
+
+  .tooltip__close {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    margin-left: -8px;
+    color: red;
+    display: inline-block;
   }
 
   .form-row {
